@@ -2,9 +2,11 @@ version: '3'
 
 services:
   healthcheck:
-    image: felipemocruha/healthcheck:0.1.0
+    image: felipemocruha/healthcheck:${IMG_VERSION}
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8090:80"
+      - "80:80"
+    deploy:
+      mode: global

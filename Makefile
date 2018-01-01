@@ -9,5 +9,7 @@ push:
 pull:
 	docker pull felipemocruha/healthcheck:$(IMG_VERSION)
 
+deploy:
+	docker stack deploy healthcheck
 
-.PHONY: build push pull
+.PHONY: build push pull deploy
